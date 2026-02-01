@@ -1,0 +1,102 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Outfit:wght@300;400;500;600;700;800;900&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  font-family: Inter, system-ui, -apple-system, sans-serif;
+  background-color: white;
+  color: #334155;
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    @apply font-display font-bold;
+  }
+}
+
+@layer components {
+  .btn-primary {
+    @apply bg-safety-orange-600 hover:bg-safety-orange-700 text-white font-semibold py-3 px-8 rounded-lg shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105;
+  }
+
+  .btn-secondary {
+    @apply bg-highway-green-600 hover:bg-highway-green-700 text-white font-semibold py-3 px-8 rounded-lg shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105;
+  }
+
+  .btn-outline {
+    @apply border-2 border-safety-orange-600 text-safety-orange-600 hover:bg-safety-orange-600 hover:text-white font-semibold py-3 px-8 rounded-lg transition-all duration-300;
+  }
+
+  .section-title {
+    @apply text-4xl md:text-5xl font-display font-bold text-asphalt-grey-900 mb-4;
+  }
+
+  .section-subtitle {
+    @apply text-lg md:text-xl text-asphalt-grey-600 mb-8;
+  }
+
+  .card {
+    @apply bg-white rounded-xl shadow-lg hover:shadow-2xl transition-all duration-300 p-6 border border-asphalt-grey-100;
+  }
+
+  .card-hover {
+    @apply transform hover:-translate-y-2 transition-transform duration-300;
+  }
+
+  .container-custom {
+    @apply max-w-7xl mx-auto px-4 sm:px-6 lg:px-8;
+  }
+
+  .section-padding {
+    @apply py-16 md:py-24;
+  }
+
+  .gradient-text {
+    @apply bg-gradient-to-r from-safety-orange-600 to-highway-green-600 bg-clip-text text-transparent;
+  }
+
+  .hero-gradient {
+    @apply bg-gradient-to-br from-asphalt-grey-900 via-asphalt-grey-800 to-highway-green-900;
+  }
+}
+
+@layer utilities {
+  .animation-delay-200 {
+    animation-delay: 200ms;
+  }
+
+  .animation-delay-400 {
+    animation-delay: 400ms;
+  }
+
+  .animation-delay-600 {
+    animation-delay: 600ms;
+  }
+}
+
+/* Smooth Scrolling */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  @apply bg-asphalt-grey-100;
+}
+
+::-webkit-scrollbar-thumb {
+  @apply bg-safety-orange-500 rounded-full;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  @apply bg-safety-orange-600;
+}
