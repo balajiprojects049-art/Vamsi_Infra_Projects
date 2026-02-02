@@ -100,24 +100,54 @@ const Certifications = () => {
             {/* Certifications */}
             <section className="section-padding bg-white">
                 <div className="container-custom">
-                    <h2 className="section-title text-center mb-12">Our Certifications</h2>
-                    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-5xl mx-auto">
+                    <h2 className="section-title text-center mb-12">Test Certificates & Approvals</h2>
+
+                    {/* Official Certifications List */}
+                    <div className="flex flex-wrap justify-center gap-4 mb-16">
                         {companyInfo.qualityStandards.certifications.map((cert, index) => (
-                            <motion.div
-                                key={index}
-                                initial={{ opacity: 0, scale: 0.9 }}
-                                whileInView={{ opacity: 1, scale: 1 }}
-                                viewport={{ once: true }}
-                                transition={{ duration: 0.4, delay: index * 0.1 }}
-                                className="card bg-gradient-to-br from-safety-orange-50 to-highway-green-50 border-2 border-safety-orange-200 text-center"
-                            >
-                                <div className="text-5xl mb-4">🏅</div>
-                                <h3 className="font-bold text-asphalt-grey-900 leading-snug">
-                                    {cert}
-                                </h3>
-                            </motion.div>
+                            <span key={index} className="bg-white border border-asphalt-grey-200 text-asphalt-grey-700 px-6 py-3 rounded-full font-medium shadow-sm flex items-center">
+                                <span className="text-highway-green-600 mr-2 text-xl">✓</span>
+                                {cert}
+                            </span>
                         ))}
                     </div>
+
+                    {/* Certificate Images Grid */}
+                    <motion.div
+                        initial={{ opacity: 0 }}
+                        whileInView={{ opacity: 1 }}
+                        viewport={{ once: true }}
+                        transition={{ duration: 0.8 }}
+                        className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6"
+                    >
+                        {companyInfo.qualityStandards.certificateImages.map((image, index) => (
+                            <motion.div
+                                key={index}
+                                initial={{ opacity: 0, y: 30 }}
+                                whileInView={{ opacity: 1, y: 0 }}
+                                viewport={{ once: true }}
+                                transition={{ duration: 0.5, delay: index * 0.05 }}
+                                className="group relative bg-white p-2 rounded-xl shadow-md hover:shadow-2xl transition-all duration-300 border border-asphalt-grey-100 cursor-pointer"
+                                onClick={() => window.open(image, '_blank')}
+                            >
+                                <div className="aspect-[3/4] overflow-hidden rounded-lg bg-asphalt-grey-100 relative">
+                                    <img
+                                        src={image}
+                                        alt={`Certificate ${index + 1}`}
+                                        className="w-full h-full object-contain group-hover:scale-105 transition-transform duration-500"
+                                    />
+                                    <div className="absolute inset-0 bg-black/0 group-hover:bg-black/10 transition-colors duration-300 flex items-center justify-center">
+                                        <div className="opacity-0 group-hover:opacity-100 transform translate-y-4 group-hover:translate-y-0 transition-all duration-300 bg-white/90 p-3 rounded-full shadow-lg text-asphalt-grey-900">
+                                            🔍 View
+                                        </div>
+                                    </div>
+                                </div>
+                                <div className="mt-3 text-center">
+                                    <p className="text-sm font-medium text-asphalt-grey-600">Official Certificate</p>
+                                </div>
+                            </motion.div>
+                        ))}
+                    </motion.div>
                 </div>
             </section>
 

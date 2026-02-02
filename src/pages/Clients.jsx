@@ -111,7 +111,7 @@ const Clients = () => {
             <section className="section-padding bg-white">
                 <div className="container-custom">
                     <h2 className="section-title text-center mb-12">Reputed Clients</h2>
-                    <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8 max-w-6xl mx-auto">
+                    <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-5 gap-4 max-w-6xl mx-auto">
                         {companyInfo.clients.map((client, index) => (
                             <motion.div
                                 key={index}
@@ -119,10 +119,27 @@ const Clients = () => {
                                 whileInView={{ opacity: 1, scale: 1 }}
                                 viewport={{ once: true }}
                                 transition={{ duration: 0.4, delay: index * 0.05 }}
-                                className="card card-hover flex flex-col items-center justify-center p-8 aspect-square"
+                                className="group card relative overflow-hidden flex flex-col items-center justify-center p-4 h-full border hover:border-safety-orange-200 hover:shadow-[0_20px_40px_-12px_rgba(0,0,0,0.2)] transition-all duration-300"
                             >
-                                <div className="text-5xl mb-3">🏢</div>
-                                <p className="text-sm text-center font-semibold text-asphalt-grey-800">
+                                <div className="absolute top-0 left-0 w-full h-1.5 bg-gradient-to-r from-safety-orange-500 to-highway-green-500 transform scale-x-0 group-hover:scale-x-100 transition-transform duration-300 origin-left"></div>
+
+                                <div className="flex-grow flex items-center justify-center w-full mb-3 group-hover:scale-105 transition-transform duration-300">
+                                    {client.logo ? (
+                                        <img
+                                            src={client.logo}
+                                            alt={client.name}
+                                            className="w-12 h-12 object-contain"
+                                        />
+                                    ) : (
+                                        <img
+                                            src="/images/clients/default_building.png"
+                                            alt="Client Logo"
+                                            className="w-12 h-12 object-contain"
+                                        />
+                                    )}
+                                </div>
+
+                                <p className="text-xs text-center font-semibold text-asphalt-grey-800 group-hover:text-asphalt-grey-900 transition-colors">
                                     {client.name}
                                 </p>
                             </motion.div>

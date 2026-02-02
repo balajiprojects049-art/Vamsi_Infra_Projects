@@ -164,6 +164,25 @@ Every project we undertake is backed by **certified materials**, **experienced p
             'MoRTH (Ministry of Road Transport & Highways) Standards',
             'ISO 9001:2015 Quality Management',
             'Government Test Certificates Available'
+        ],
+        certificateImages: [
+            '/images/certificates/book ps_page-0018.jpg',
+            '/images/certificates/book ps_page-0019.jpg',
+            '/images/certificates/book ps_page-0020.jpg',
+            '/images/certificates/book ps_page-0021.jpg',
+            '/images/certificates/book ps_page-0022.jpg',
+            '/images/certificates/book ps_page-0023.jpg',
+            '/images/certificates/book ps_page-0024.jpg',
+            '/images/certificates/book ps_page-0025.jpg',
+            '/images/certificates/book ps_page-0026.jpg',
+            '/images/certificates/book ps_page-0027.jpg',
+            '/images/certificates/book ps_page-0028.jpg',
+            '/images/certificates/book ps_page-0029.jpg',
+            '/images/certificates/book ps_page-0030.jpg',
+            '/images/certificates/book ps_page-0031.jpg',
+            '/images/certificates/book ps_page-0032.jpg',
+            '/images/certificates/book ps_page-0033.jpg',
+            '/images/certificates/book ps_page-0034.jpg'
         ]
     },
 
@@ -175,13 +194,24 @@ Every project we undertake is backed by **certified materials**, **experienced p
     },
 
     clients: [
-        { name: 'National Highways Authority of India (NHAI)', logo: '/images/clients/nhai.png' },
-        { name: 'Andhra Pradesh Road Development Corporation', logo: '/images/clients/aprdc.png' },
-        { name: 'Public Works Department (PWD)', logo: '/images/clients/pwd.png' },
-        { name: 'Rural Roads Department', logo: '/images/clients/rrd.png' },
-        { name: 'Municipal Corporations', logo: '/images/clients/municipal.png' },
-        { name: 'L&T Construction', logo: '/images/clients/lnt.png' },
-        { name: 'GMR Infrastructure', logo: '/images/clients/gmr.png' },
-        { name: 'KMC Constructions', logo: '/images/clients/kmc.png' }
+        { name: 'L&T Infra', logo: '' },
+        { name: 'DILIP BUILDCON LIMITED', logo: '' },
+        { name: 'SUDHAKARA INFRA', logo: '' },
+        { name: 'SAITEJA CONSTRUCTIONS', logo: '' },
+        { name: 'SAINATH CONSTRUCTIONS', logo: '' },
+        { name: 'M SURYANARANAREDDY & CO', logo: '' },
+        { name: 'GSV NARAYANA & CO', logo: '' },
+        { name: 'VENKATESWARA REDDY & CO', logo: '' },
+        { name: 'KBC INFRASTRUCTURE LTD', logo: '' },
+        { name: 'V.N.R CONSTRUCTIONS PVT LTD', logo: '' },
+        { name: 'TONDAPI VENKATESWARLU & CO', logo: '' },
+        { name: 'SUNITHA INFRA PROJECTS', logo: '' },
+        { name: 'IRP INFRA TECH PVT LTD', logo: '' },
+        { name: 'JAGANMOHAN REDDY CONSTRUCTIONS', logo: '' },
+        { name: 'RAGHAVENDRA CONSTRUCTIONS', logo: '' },
+        { name: 'SEENAIAH & CO', logo: '' },
+        { name: 'K.V.R CONSTRUCTIONS', logo: '' },
+        { name: 'JAYARAJ FORTUNE LTD', logo: '' },
+        { name: 'AVANI CONSTRUCTIONS', logo: '' }
     ]
 };
