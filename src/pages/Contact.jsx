@@ -22,8 +22,29 @@ const Contact = () => {
 
     const handleSubmit = (e) => {
         e.preventDefault();
-        console.log('Form submitted:', formData);
+
+        // Format the message for WhatsApp
+        const phoneNumber = '917093079584';
+        const message = `Vamsi Infra Projects - Website Inquiry
+
+Name - ${formData.name}
+Phone - ${formData.phone}
+Email - ${formData.email}
+Subject - ${formData.subject}
+
+Message -
+${formData.message}`;
+
+        // Create WhatsApp URL
+        const whatsappUrl = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`;
+
+        // Open WhatsApp in a new tab
+        window.open(whatsappUrl, '_blank');
+
+        console.log('Sent to WhatsApp:', formData);
         setSubmitted(true);
+
+        // Reset form after a delay
         setTimeout(() => {
             setSubmitted(false);
             setFormData({ name: '', phone: '', email: '', subject: '', message: '' });

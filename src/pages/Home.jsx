@@ -211,6 +211,44 @@ const Home = () => {
                 </div>
             </section>
 
+            {/* Recent Projects */}
+            <section className="section-padding bg-white">
+                <div className="container-custom">
+                    <div className="text-center mb-12">
+                        <h2 className="section-title">Our Recent Projects</h2>
+                        <p className="section-subtitle">
+                            A glimpse of our successfully completed road safety and infrastructure projects
+                        </p>
+                    </div>
+
+                    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                        {companyInfo.projects && companyInfo.projects.map((project, index) => (
+                            <motion.div
+                                key={project.id}
+                                initial={{ opacity: 0, scale: 0.9 }}
+                                whileInView={{ opacity: 1, scale: 1 }}
+                                viewport={{ once: true }}
+                                transition={{ duration: 0.4, delay: index * 0.1 }}
+                                className="group relative overflow-hidden rounded-xl shadow-lg"
+                            >
+                                <div className="h-64 overflow-hidden">
+                                    <img
+                                        src={project.image}
+                                        alt={project.title}
+                                        className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+                                    />
+                                </div>
+                                <div className="absolute inset-0 bg-gradient-to-t from-asphalt-grey-900 to-transparent opacity-90"></div>
+                                <div className="absolute bottom-0 left-0 p-6 text-white translate-y-2 group-hover:translate-y-0 transition-transform duration-300">
+                                    <h3 className="text-xl font-bold mb-1">{project.title}</h3>
+                                    <p className="text-sm text-gray-200 line-clamp-2">{project.description}</p>
+                                </div>
+                            </motion.div>
+                        ))}
+                    </div>
+                </div>
+            </section>
+
             {/* Why Choose Us */}
             <section className="section-padding bg-white">
                 <div className="container-custom">
@@ -276,8 +314,12 @@ const Home = () => {
             </section>
 
             {/* CTA Section */}
-            <section className="section-padding hero-gradient text-white">
-                <div className="container-custom text-center">
+            <section
+                className="section-padding relative bg-fixed bg-center bg-cover text-white"
+                style={{ backgroundImage: "url('/images/home/cta-bg.png')" }}
+            >
+                <div className="absolute inset-0 bg-asphalt-grey-900/80"></div>
+                <div className="container-custom text-center relative z-10">
                     <motion.div
                         initial={{ opacity: 0, y: 20 }}
                         whileInView={{ opacity: 1, y: 0 }}

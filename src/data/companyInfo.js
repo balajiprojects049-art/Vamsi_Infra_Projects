@@ -186,6 +186,45 @@ Every project we undertake is backed by **certified materials**, **experienced p
         ]
     },
 
+    projects: [
+        {
+            id: 1,
+            image: '/images/our work/image1.jpg',
+            title: 'Highway Road Marking',
+            description: 'Thermoplastic road marking with high retroreflectivity for NHAI highway project.'
+        },
+        {
+            id: 2,
+            image: '/images/our work/image2.jpg',
+            title: 'City Road Safety',
+            description: 'Installation of traffic signs and road studs for urban road safety improvement.'
+        },
+        {
+            id: 3,
+            image: '/images/our work/image3.jpg',
+            title: 'Industrial Complex Marking',
+            description: 'Comprehensive road marking and safety signage for a large industrial facility.'
+        },
+        {
+            id: 4,
+            image: '/images/our work/image4.jpg',
+            title: 'Residential Zone Safety',
+            description: 'Speed breakers and pedestrian crossing markings for residential colony safety.'
+        },
+        {
+            id: 5,
+            image: '/images/our work/image5.jpg',
+            title: 'Highway Crash Barriers',
+            description: 'Installation of metal beam crash barriers for enhanced highway safety.'
+        },
+        {
+            id: 6,
+            image: '/images/our work/image6.jpg',
+            title: 'Parking Lot Marking',
+            description: 'Structured parking layout marking with precision for a commercial complex.'
+        }
+    ],
+
     statistics: {
         products: '50+',
         clients: '100+',
