@@ -3,6 +3,7 @@ import { motion } from 'framer-motion';
 import { companyInfo } from '../data/companyInfo';
 import { servicesData } from '../data/servicesData';
 import { useEffect, useState } from 'react';
+import SEO from '../components/SEO';
 
 const Home = () => {
     const [count, setCount] = useState({ products: 0, clients: 0, projects: 0 });
@@ -35,6 +36,7 @@ const Home = () => {
 
     return (
         <div className="min-h-screen">
+            <SEO title="Home" />
             {/* Hero Section */}
             <section className="relative min-h-screen flex items-center justify-center overflow-hidden hero-gradient pt-32 pb-20">
                 {/* Background Pattern */}

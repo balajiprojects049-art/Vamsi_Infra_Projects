@@ -1,10 +1,15 @@
 import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import { servicesData, additionalServices } from '../data/servicesData';
+import SEO from '../components/SEO';
 
 const Services = () => {
     return (
         <div className="min-h-screen pt-24">
+            <SEO
+                title="Our Services"
+                description="Specialized road safety services including thermoplastic road marking, traffic sign board installation, crash barriers, and road stud fixing."
+            />
             {/* Hero Section */}
             <section className="relative h-[600px] flex items-center justify-center text-white overflow-hidden">
                 <div className="absolute inset-0">

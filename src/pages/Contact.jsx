@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import { motion } from 'framer-motion';
 import { companyInfo } from '../data/companyInfo';
+import SEO from '../components/SEO';
 
 const Contact = () => {
     const [formData, setFormData] = useState({
@@ -31,6 +32,10 @@ const Contact = () => {
 
     return (
         <div className="min-h-screen pt-24">
+            <SEO
+                title="Contact Us"
+                description="Contact Vamsi Infra Projects for road safety solutions. Serving Guntur, Andhra Pradesh and all over India. Phone: 8297457999, Email: vamsiinfraprojects@gmail.com"
+            />
             {/* Hero Section */}
             <section className="relative h-[600px] flex items-center justify-center text-white overflow-hidden">
                 <div className="absolute inset-0">

@@ -1,9 +1,14 @@
 import { motion } from 'framer-motion';
 import { companyInfo } from '../data/companyInfo';
+import SEO from '../components/SEO';
 
 const Clients = () => {
     return (
         <div className="min-h-screen pt-24">
+            <SEO
+                title="Our Clients"
+                description="Trusted by over 100 government departments and infrastructure giants including NHAI, L&T, and GMR. View our client list."
+            />
             {/* Hero Section */}
             <section className="relative h-[600px] flex items-center justify-center text-white overflow-hidden">
                 <div className="absolute inset-0">

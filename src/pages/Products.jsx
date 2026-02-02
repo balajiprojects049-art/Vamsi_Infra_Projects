@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import { motion } from 'framer-motion';
 import { productsData, productCategories } from '../data/productsData';
+import SEO from '../components/SEO';
 
 const Products = () => {
     const [selectedCategory, setSelectedCategory] = useState('all');
@@ -13,6 +14,10 @@ const Products = () => {
 
     return (
         <div className="min-h-screen pt-24">
+            <SEO
+                title="Our Products"
+                description="Explore our range of 50+ road safety products including road studs, delineators, speed breakers, barricades, and more. All MoST approved."
+            />
             {/* Hero Section */}
             <section className="relative h-[600px] flex items-center justify-center text-white overflow-hidden">
                 <div className="absolute inset-0">

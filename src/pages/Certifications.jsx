@@ -1,9 +1,14 @@
 import { motion } from 'framer-motion';
 import { companyInfo } from '../data/companyInfo';
+import SEO from '../components/SEO';
 
 const Certifications = () => {
     return (
         <div className="min-h-screen pt-24">
+            <SEO
+                title="Quality Certifications"
+                description="MoST and IRC approved road safety products. ISO 9001:2015 certified methodology for thermoplastic road marking and signage."
+            />
             {/* Hero Section */}
             <section className="relative h-[600px] flex items-center justify-center text-white overflow-hidden">
                 <div className="absolute inset-0">

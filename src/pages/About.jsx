@@ -1,5 +1,6 @@
 import { motion } from 'framer-motion';
 import { companyInfo } from '../data/companyInfo';
+import SEO from '../components/SEO';
 
 const About = () => {
     // Function to render text with bold/gradient highlights for strings wrapped in **
@@ -19,6 +20,10 @@ const About = () => {
 
     return (
         <div className="min-h-screen pt-24">
+            <SEO
+                title="About Us"
+                description="Learn about Vamsi Infra Projects - leading road safety experts in India. Our mission is to provide world-class road marking and safety infrastructure."
+            />
             {/* Hero Section */}
             <section className="relative h-[600px] flex items-center justify-center text-white overflow-hidden">
                 <div className="absolute inset-0">
